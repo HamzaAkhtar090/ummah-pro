@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ummah Pro - Your Complete Islamic Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1E4C42;
+            --primary-darker: #0B241E;
+            --accent-gold: #EDAF53;
+            --text-light: #F5F5F5;
+            --text-dark: #1A1A1A;
+            --shadow-gold: rgba(237, 175, 83, 0.3);
+            --shadow-dark: rgba(11, 36, 30, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            background: var(--text-light);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(180deg, rgba(30, 76, 66, 0.95) 0%, rgba(11, 36, 30, 0.98) 100%);
+            padding: 1.2rem 5%;
+            box-shadow: 0 4px 30px var(--shadow-dark);
+            backdrop-filter: blur(10px);
+            animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow-gold);
+            animation: logoFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-5px) rotate(2deg); }
+        }
+
+        .logo {
+            font-family: 'Amiri', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 15px var(--shadow-gold);
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 2px 15px var(--shadow-gold);
+            }
+            50% {
+                text-shadow: 0 2px 25px var(--shadow-gold), 0 0 40px var(--shadow-gold);
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Enhanced Hero Section */
+        .hero {
+            background: linear-gradient(180deg, #1E4C42 0%, #0B241E 100%);
+            padding: 180px 5% 120px;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Animated Background Patterns */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 15% 50%, rgba(237, 175, 83, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(237, 175, 83, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(237, 175, 83, 0.08) 0%, transparent 50%);
+            animation: patternMove 20s ease-in-out infinite;
+        }
+
+        @keyframes patternMove {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.1) rotate(5deg); }
+        }
+
+        /* Geometric Decorations */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(237, 175, 83, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulseGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+        }
+
+        .geometric-shape {
+            position: absolute;
+            border: 2px solid rgba(237, 175, 83, 0.2);
+            animation: rotateShape 30s linear infinite;
+        }
+
+        .shape-1 {
+            top: 10%;
+            left: 5%;
+            width: 150px;
+            height: 150px;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+
+        .shape-2 {
+            bottom: 15%;
+            right: 8%;
+            width: 200px;
+            height: 200px;
+            border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+            animation-delay: -10s;
+        }
+
+        .shape-3 {
+            top: 60%;
+            left: 10%;
+            width: 100px;
+            height: 100px;
+            border-radius: 30% 70% 53% 47% / 44% 56% 44% 56%;
+            animation-delay: -20s;
+        }
+
+        @keyframes rotateShape {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+            50% {
+                transform: rotate(180deg) scale(1.1);
+            }
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            animation: fadeInLeft 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-80px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.6rem 1.5rem;
+            background: rgba(237, 175, 83, 0.15);
+            border: 1px solid var(--accent-gold);
+            border-radius: 50px;
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.2s backwards;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-family: 'Amiri', serif;
+            font-size: 5.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            text-shadow: 0 4px 30px var(--shadow-gold);
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s backwards;
+            font-weight: 700;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-highlight {
+            background: linear-gradient(120deg, var(--accent-gold), #d89b3d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% {
+                filter: brightness(1);
+            }
+            50% {
+                filter: brightness(1.3);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            line-height: 1.7;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s backwards;
+            font-weight: 300;
+        }
+
+        .hero-subtitle strong {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.7s backwards;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-gold);
+            display: block;
+            text-shadow: 0 2px 15px var(--shadow-gold);
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            opacity: 0.8;
+            font-size: 0.95rem;
+            margin-top: 0.3rem;
+        }
+
+        .download-section {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.9s backwards;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem 2.5rem;
+            background: var(--accent-gold);
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 35px rgba(237, 175, 83, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s;
+        }
+
+        .download-btn:hover::before {
+            left: 100%;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 45px rgba(237, 175, 83, 0.7);
+        }
+
+        .download-btn.secondary {
+            background: transparent;
+            border: 2px solid var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .download-btn.secondary:hover {
+            background: var(--accent-gold);
+            color: var(--text-dark);
+        }
+
+        .download-btn svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        /* Hero Phone Display */
+        .hero-visual {
+            position: relative;
+            animation: fadeInRight 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s backwards;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(80px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .phone-mockup {
+            position: relative;
+            width: 370px;
+            height: 650px;
+            background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+            border-radius: 45px;
+            padding: 15px;
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+            animation: floatPhone 6s ease-in-out infinite;
+            z-index: 2;
+        }
+
+        @keyframes floatPhone {
+            0%, 100% {
+                transform: translateY(0px) rotateY(-5deg);
+            }
+            50% {
+                transform: translateY(-20px) rotateY(5deg);
+            }
+        }
+
+        .phone-notch {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 15px;
+            background: #000;
+            border-radius: 0 0 15px 15px;
+            z-index: 3;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 35px;
+            overflow: hidden;
+            background: linear-gradient(180deg, #1E4C42 0%, #0B241E 100%);
+            position: relative;
+        }
+
+        .phone-screenshot {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: screenshotSlide 20s ease-in-out infinite;
+        }
+
+        @keyframes screenshotSlide {
+            0%, 15% { opacity: 1; }
+            20%, 100% { opacity: 0; }
+        }
+
+        .phone-screenshot:nth-child(2) { animation-delay: 4s; }
+        .phone-screenshot:nth-child(3) { animation-delay: 8s; }
+        .phone-screenshot:nth-child(4) { animation-delay: 12s; }
+        .phone-screenshot:nth-child(5) { animation-delay: 16s; }
+
+        .phone-screenshot {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Floating Phones Background */
+        .floating-phone {
+            position: absolute;
+            width: 220px;
+            height: 450px;
+            background: linear-gradient(135deg, rgba(42, 42, 42, 0.4), rgba(26, 26, 26, 0.6));
+            border-radius: 35px;
+            padding: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            opacity: 0.4;
+        }
+
+        .floating-phone-1 {
+            top: 5%;
+            right: -5%;
+            animation: floatPhone1 8s ease-in-out infinite;
+            transform: rotate(-15deg);
+        }
+
+        .floating-phone-2 {
+            bottom: 10%;
+            right: 15%;
+            animation: floatPhone2 10s ease-in-out infinite;
+            transform: rotate(10deg);
+        }
+
+        @keyframes floatPhone1 {
+            0%, 100% { transform: translateY(0px) rotate(-15deg); }
+            50% { transform: translateY(-30px) rotate(-10deg); }
+        }
+
+        @keyframes floatPhone2 {
+            0%, 100% { transform: translateY(0px) rotate(10deg); }
+            50% { transform: translateY(30px) rotate(15deg); }
+        }
+
+        .floating-phone-screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 28px;
+            background: linear-gradient(180deg, rgba(30, 76, 66, 0.6) 0%, rgba(11, 36, 30, 0.8) );
+            
+        }
+
+        /* Features Section */
+        .features {
+            padding: 120px 5%;
+            background: var(--text-light);
+            position: relative;
+        }
+
+        .features::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: linear-gradient(to bottom, var(--primary-darker), transparent);
+            opacity: 0.08;
+        }
+
+        .section-title {
+            font-family: 'Amiri', serif;
+            font-size: 3.8rem;
+            text-align: center;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 5px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+            border-radius: 3px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.25rem;
+            margin-bottom: 5rem;
+            font-weight: 300;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 3rem 2.5rem;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUpCard 0.8s ease-out forwards;
+        }
+
+        .feature-card:nth-child(1) { animation-delay: 0.1s; }
+        .feature-card:nth-child(2) { animation-delay: 0.2s; }
+        .feature-card:nth-child(3) { animation-delay: 0.3s; }
+        .feature-card:nth-child(4) { animation-delay: 0.4s; }
+        .feature-card:nth-child(5) { animation-delay: 0.5s; }
+        .feature-card:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUpCard {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-dark), var(--accent-gold));
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-20px);
+            box-shadow: 0 25px 70px rgba(30, 76, 66, 0.2);
+        }
+
+        .feature-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-darker));
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 3rem;
+            box-shadow: 0 10px 30px var(--shadow-dark);
+            transition: all 0.5s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: rotateY(360deg) scale(1.1);
+            background: linear-gradient(135deg, var(--accent-gold), #d89b3d);
+        }
+
+        .feature-card h3 {
+            font-family: 'Amiri', serif;
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* Screenshots Section */
+        .screenshots {
+            padding: 120px 5%;
+            background: linear-gradient(180deg, #1E4C42 0%, #0B241E 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .screenshots::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 25% 30%, rgba(237, 175, 83, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 70%, rgba(237, 175, 83, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .screenshots .section-title {
+            color: var(--accent-gold);
+        }
+
+        .screenshots .section-subtitle {
+            color: var(--text-light);
+            opacity: 0.85;
+        }
+
+        .screenshots-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .screenshot-item {
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 30px;
+            padding: 1.8rem;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(237, 175, 83, 0.2);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: fadeInScale 0.8s ease-out backwards;
+            overflow: hidden;
+        }
+
+        .screenshot-item:nth-child(1) { animation-delay: 0.1s; }
+        .screenshot-item:nth-child(2) { animation-delay: 0.15s; }
+        .screenshot-item:nth-child(3) { animation-delay: 0.2s; }
+        .screenshot-item:nth-child(4) { animation-delay: 0.25s; }
+        .screenshot-item:nth-child(5) { animation-delay: 0.3s; }
+        .screenshot-item:nth-child(6) { animation-delay: 0.35s; }
+        .screenshot-item:nth-child(7) { animation-delay: 0.4s; }
+        .screenshot-item:nth-child(8) { animation-delay: 0.45s; }
+        .screenshot-item:nth-child(9) { animation-delay: 0.5s; }
+        .screenshot-item:nth-child(10) { animation-delay: 0.55s; }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .screenshot-item:hover {
+            transform: translateY(-15px) scale(1.05);
+            border-color: var(--accent-gold);
+            box-shadow: 0 25px 60px var(--shadow-gold);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .screenshot-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Social Media Section */
+        .social-media {
+            padding: 120px 5%;
+            background: var(--text-light);
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            margin-top: 4rem;
+        }
+
+        .social-link {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-darker));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 2rem;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px var(--shadow-dark);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInScale 0.8s ease-out backwards;
+        }
+
+        .social-link:nth-child(1) { animation-delay: 0.1s; }
+        .social-link:nth-child(2) { animation-delay: 0.2s; }
+        .social-link:nth-child(3) { animation-delay: 0.3s; }
+        .social-link:nth-child(4) { animation-delay: 0.4s; }
+        .social-link:nth-child(5) { animation-delay: 0.5s; }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--accent-gold);
+            transform: scale(0);
+            border-radius: 50%;
+            transition: transform 0.5s ease;
+        }
+
+        .social-link:hover::before {
+            transform: scale(1);
+        }
+
+        .social-link svg {
+            position: relative;
+            z-index: 1;
+            transition: transform 0.5s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-15px) rotate(360deg);
+            box-shadow: 0 20px 50px rgba(237, 175, 83, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(180deg, #1E4C42 0%, #0B241E 100%);
+            padding: 4rem 5%;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        footer p {
+            opacity: 0.85;
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+
+        .footer-heart {
+            color: var(--accent-gold);
+            animation: heartbeat 1.5s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--accent-gold);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+
+            .hero-text {
+                order: 1;
+            }
+
+            .hero-visual {
+                order: 2;
+                height: 500px;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .download-section {
+                justify-content: center;
+            }
+
+            .floating-phone {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: linear-gradient(180deg, rgba(30, 76, 66, 0.98) 0%, rgba(11, 36, 30, 1) 100%);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                box-shadow: 0 15px 40px var(--shadow-dark);
+                backdrop-filter: blur(10px);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 140px 5% 80px;
+                min-height: auto;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .section-title {
+                font-size: 2.8rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .download-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .download-btn {
+                justify-content: center;
+            }
+
+            .phone-mockup {
+                display: none;
+                width: 370px;
+                height: 550px;
+            }
+
+            .screenshots-container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+            }
+
+            .social-links {
+                gap: 1.8rem;
+            }
+
+            .social-link {
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .logo {
+                font-size: 1.8rem;
+            }
+
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="icon.png" alt="Ummah Pro Icon" class="logo-icon">
+                <a href="#" class="logo">Ummah Pro</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
+                <li><a href="#social">Connect</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Enhanced Hero Section -->
+    <section class="hero" id="home">
+        <div class="geometric-shape shape-1"></div>
+        <div class="geometric-shape shape-2"></div>
+        <div class="geometric-shape shape-3"></div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">🌙 Your Digital Islamic Companion</div>
+                <h1>
+                    <span class="hero-highlight">Ummah Pro</span><br>
+                    Elevate Your<br>
+                    Spiritual Journey
+                </h1>
+                <p class="hero-subtitle">
+                    Experience the most <strong>comprehensive Islamic app</strong> with Quran, Prayer Times, Qibla Direction, AI-powered guidance, and more. Join thousands of Muslims worldwide in strengthening their connection with Allah.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Active Users</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.8★</span>
+                        <span class="stat-label">User Rating</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">Features</span>
+                    </div>
+                </div>
+                
+                <div class="download-section">
+                    <a href="https://play.google.com/store/apps/details?id=com.ummahpro.app" class="download-btn" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                        </svg>
+                        Play Store
+                    </a>
+                    
+                    <a href="https://apps.apple.com/pk/app/ummah-pro-adhan-qibla-quran/id6756920484" class="download-btn secondary" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z"/>
+                        </svg>
+                        App Store
+                    </a>
+                    
+                    <a href="#" class="download-btn secondary" onclick="alert('APK download will be available soon!'); return false;">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13,9V3.5L18.5,9M6,2C4.89,2 4,2.89 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2H6Z"/>
+                        </svg>
+                        APK
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="floating-phone floating-phone-1">
+                    <div class="floating-phone-screen"></div>
+                </div>
+                <div class="floating-phone floating-phone-2">
+                    <div class="floating-phone-screen"></div>
+                </div>
+                
+                <div class="phone-mockup">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <img src="screenshot_2.png" alt="Ummah Pro Screenshot" class="phone-screenshot">
+                        <img src="screenshot_3.png" alt="Ummah Pro Screenshot" class="phone-screenshot">
+                        <img src="screenshot_4.png" alt="Ummah Pro Screenshot" class="phone-screenshot">
+                        <img src="screenshot_5.png" alt="Ummah Pro Screenshot" class="phone-screenshot">
+                        <img src="screenshot_6.png" alt="Ummah Pro Screenshot" class="phone-screenshot">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2 class="section-title">Powerful Features</h2>
+        <p class="section-subtitle">Everything you need for your spiritual journey in one beautiful app</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📖</div>
+                <h3>Recite Quran</h3>
+                <p>Read the Holy Quran with beautiful Arabic text, multiple translations, and audio recitations from world-renowned Qaris</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🧭</div>
+                <h3>Qibla Direction</h3>
+                <p>Find accurate Qibla direction anywhere in the world using advanced compass technology and GPS precision</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🕌</div>
+                <h3>Accurate Prayer Timing</h3>
+                <p>Never miss a prayer with precise prayer times calculated for your exact location with multiple calculation methods</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📿</div>
+                <h3>Digital Tasbih</h3>
+                <p>Keep track of your dhikr with a beautiful, easy-to-use digital tasbih counter with customizable goals</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🌙</div>
+                <h3>Daily Azkar</h3>
+                <p>Strengthen your faith with morning and evening remembrance, curated from authentic hadith sources</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>AI-Deen</h3>
+                <p>Get instant Islamic guidance and answers to your questions with AI-powered assistance based on authentic sources</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots" id="screenshots">
+        <h2 class="section-title">App Screenshots</h2>
+        <p class="section-subtitle">Experience the beauty and elegance of Ummah Pro</p>
+        
+        <div class="screenshots-container">
+            <div class="screenshot-item">
+                <img src="screenshot_2.png" alt="Ummah Pro Screenshot" class="screenshot-image">
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshot_3.png" alt="Ummah Pro Screenshot" class="screenshot-image">
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshot_4.png" alt="Ummah Pro Screenshot" class="screenshot-image">
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshot_5.png" alt="Ummah Pro Screenshot" class="screenshot-image">
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshot_6.png" alt="Ummah Pro Screenshot" class="screenshot-image">
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshot_7.png" alt="Ummah Pro Screenshot" class="screenshot-image">
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshot_8.png" alt="Ummah Pro Screenshot" class="screenshot-image">
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshot_9.png" alt="Ummah Pro Screenshot" class="screenshot-image">
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshot_10.png" alt="Ummah Pro Screenshot" class="screenshot-image">
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshot_11.png" alt="Ummah Pro Screenshot" class="screenshot-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-media" id="social">
+        <h2 class="section-title">Connect With Us</h2>
+        <p class="section-subtitle">Follow us on social media for updates, tips, and Islamic content</p>
+        
+        <div class="social-links">
+            <a href="https://facebook.com" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+                    <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
+                </svg>
+            </a>
+            
+            <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+                    <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+                </svg>
+            </a>
+            
+            <a href="https://tiktok.com" class="social-link" target="_blank" rel="noopener" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+                    <path d="M16.6,5.82s.51.5,0,0A4.278,4.278,0,0,0,15.54,3h-3.09V12.4a2.592,2.592,0,0,1-2.59,2.5c-1.42,0-2.6-1.16-2.6-2.6c0-1.72,1.66-3.01,3.37-2.48V6.66c-3.45-.46-6.47,2.22-6.47,5.64c0,3.33,2.76,5.7,5.69,5.7c3.14,0,5.69-2.55,5.69-5.7V9.01a7.35,7.35,0,0,0,4.3,1.38V7.3s-1.88.09-3.24-1.48Z"/>
+                </svg>
+            </a>
+            
+            <a href="https://twitter.com" class="social-link" target="_blank" rel="noopener" aria-label="Twitter">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+                    <path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.70,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"/>
+                </svg>
+            </a>
+            
+            <a href="https://discord.com" class="social-link" target="_blank" rel="noopener" aria-label="Discord">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+                    <path d="M22,24L16.75,19L17.38,21H4.5A2.5,2.5 0 0,1 2,18.5V3.5A2.5,2.5 0 0,1 4.5,1H19.5A2.5,2.5 0 0,1 22,3.5V24M12,6.8C9.32,6.8 7.44,7.95 7.44,7.95C8.47,7.03 10.27,6.5 10.27,6.5L10.1,6.33C8.41,6.36 6.88,7.53 6.88,7.53C5.16,11.12 5.27,14.22 5.27,14.22C6.67,16.03 8.75,15.9 8.75,15.9L9.46,15C8.21,14.73 7.42,13.62 7.42,13.62C7.42,13.62 9.3,14.9 12,14.9C14.7,14.9 16.58,13.62 16.58,13.62C16.58,13.62 15.79,14.73 14.54,15L15.25,15.9C15.25,15.9 17.33,16.03 18.73,14.22C18.73,14.22 18.84,11.12 17.12,7.53C17.12,7.53 15.59,6.36 13.9,6.33L13.73,6.5C13.73,6.5 15.53,7.03 16.56,7.95C16.56,7.95 14.68,6.8 12,6.8M9.93,10.59C10.58,10.59 11.11,11.16 11.1,11.86C11.1,12.55 10.58,13.13 9.93,13.13C9.29,13.13 8.77,12.55 8.77,11.86C8.77,11.16 9.28,10.59 9.93,10.59M14.1,10.59C14.75,10.59 15.27,11.16 15.27,11.86C15.27,12.55 14.75,13.13 14.1,13.13C13.46,13.13 12.94,12.55 12.94,11.86C12.94,11.16 13.45,10.59 14.1,10.59Z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with <span class="footer-heart">❤️</span> for the Ummah</p>
+        <p>&copy; 2025 Ummah Pro. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+
+        // Header background on scroll
+        let lastScroll = 0;
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const scrolled = window.pageYOffset;
+            
+            if (scrolled > 100) {
+                header.style.background = 'linear-gradient(180deg, rgba(30, 76, 66, 1) 0%, rgba(11, 36, 30, 1) 100%)';
+                header.style.padding = '0.8rem 5%';
+            } else {
+                header.style.background = 'linear-gradient(180deg, rgba(30, 76, 66, 0.95) 0%, rgba(11, 36, 30, 0.98) 100%)';
+                header.style.padding = '1.2rem 5%';
+            }
+            
+            lastScroll = scrolled;
+        });
+
+        // Parallax effect for hero
+        // window.addEventListener('scroll', function() {
+        //     const scrolled = window.pageYOffset;
+        //     const hero = document.querySelector('.hero');
+        //     const heroContent = document.querySelector('.hero-content');
+            
+        //     if (hero && scrolled < hero.offsetHeight) {
+        //         heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+        //         hero.style.opacity = 1 - (scrolled / hero.offsetHeight) * 0.5;
+        //     }
+        // });
+
+        // Add intersection observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe feature cards
+        document.querySelectorAll('.feature-card, .screenshot-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Counter animation for stats
+        function animateValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                element.textContent = value + (element.dataset.suffix || '');
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Trigger counter animation when in view
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(stat => {
+                        if (!stat.dataset.animated) {
+                            const text = stat.textContent;
+                            const number = parseInt(text.replace(/\D/g, ''));
+                            const suffix = text.replace(/[\d.]/g, '');
+                            stat.dataset.suffix = suffix;
+                            stat.textContent = '0';
+                            animateValue(stat, 0, number, 2000);
+                            stat.dataset.animated = 'true';
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const heroStats = document.querySelector('.hero-stats');
+        if (heroStats) {
+            statsObserver.observe(heroStats);
+        }
+    </script>
+</body>
+</html>
