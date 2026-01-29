@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ummah Pro - Your Complete Islamic Companion</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary-dark: #1E4C42;
@@ -54,6 +57,7 @@
                 transform: translateY(-100%);
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0);
                 opacity: 1;
@@ -83,8 +87,15 @@
         }
 
         @keyframes logoFloat {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-5px) rotate(2deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-5px) rotate(2deg);
+            }
         }
 
         .logo {
@@ -99,9 +110,12 @@
         }
 
         @keyframes glow {
-            0%, 100% {
+
+            0%,
+            100% {
                 text-shadow: 0 2px 15px var(--shadow-gold);
             }
+
             50% {
                 text-shadow: 0 2px 25px var(--shadow-gold), 0 0 40px var(--shadow-gold);
             }
@@ -122,7 +136,7 @@
             font-size: 1.05rem;
         }
 
-        .nav-links a::after {
+        /* .nav-links a::after {
             content: '';
             position: absolute;
             bottom: -5px;
@@ -131,7 +145,7 @@
             height: 2px;
             background: var(--accent-gold);
             transition: width 0.3s ease;
-        }
+        } */
 
         .nav-links a:hover::after {
             width: 100%;
@@ -148,93 +162,14 @@
             align-items: center;
         }
 
-        /* Animated Background Patterns */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 15% 50%, rgba(237, 175, 83, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 85% 30%, rgba(237, 175, 83, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 50% 80%, rgba(237, 175, 83, 0.08) 0%, transparent 50%);
-            animation: patternMove 20s ease-in-out infinite;
-        }
 
-        @keyframes patternMove {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.1) rotate(5deg); }
-        }
 
-        /* Geometric Decorations */
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(237, 175, 83, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: pulseGlow 4s ease-in-out infinite;
-        }
 
-        @keyframes pulseGlow {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 0.5;
-            }
-            50% {
-                transform: scale(1.2);
-                opacity: 0.8;
-            }
-        }
 
-        .geometric-shape {
-            position: absolute;
-            border: 2px solid rgba(237, 175, 83, 0.2);
-            animation: rotateShape 30s linear infinite;
-        }
 
-        .shape-1 {
-            top: 10%;
-            left: 5%;
-            width: 150px;
-            height: 150px;
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-        }
 
-        .shape-2 {
-            bottom: 15%;
-            right: 8%;
-            width: 200px;
-            height: 200px;
-            border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
-            animation-delay: -10s;
-        }
 
-        .shape-3 {
-            top: 60%;
-            left: 10%;
-            width: 100px;
-            height: 100px;
-            border-radius: 30% 70% 53% 47% / 44% 56% 44% 56%;
-            animation-delay: -20s;
-        }
 
-        @keyframes rotateShape {
-            0% {
-                transform: rotate(0deg) scale(1);
-            }
-            50% {
-                transform: rotate(180deg) scale(1.1);
-            }
-            100% {
-                transform: rotate(360deg) scale(1);
-            }
-        }
 
         .hero-content {
             max-width: 1400px;
@@ -256,6 +191,7 @@
                 opacity: 0;
                 transform: translateX(-80px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -292,6 +228,7 @@
                 opacity: 0;
                 transform: translateY(40px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -308,9 +245,12 @@
         }
 
         @keyframes shimmer {
-            0%, 100% {
+
+            0%,
+            100% {
                 filter: brightness(1);
             }
+
             50% {
                 filter: brightness(1.3);
             }
@@ -354,10 +294,11 @@
             color: var(--text-light);
             opacity: 0.8;
             font-size: 0.95rem;
-            margin-top: 0.3rem;
+
         }
 
         .download-section {
+            margin-bottom: 2rem;
             display: flex;
             gap: 1.5rem;
             flex-wrap: wrap;
@@ -432,6 +373,7 @@
                 opacity: 0;
                 transform: translateX(80px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -445,7 +387,7 @@
             background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
             border-radius: 45px;
             padding: 15px;
-            box-shadow: 
+            box-shadow:
                 0 30px 80px rgba(0, 0, 0, 0.5),
                 0 0 0 1px rgba(255, 255, 255, 0.1),
                 inset 0 0 0 1px rgba(255, 255, 255, 0.05);
@@ -454,9 +396,12 @@
         }
 
         @keyframes floatPhone {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0px) rotateY(-5deg);
             }
+
             50% {
                 transform: translateY(-20px) rotateY(5deg);
             }
@@ -491,14 +436,33 @@
         }
 
         @keyframes screenshotSlide {
-            0%, 15% { opacity: 1; }
-            20%, 100% { opacity: 0; }
+
+            0%,
+            15% {
+                opacity: 1;
+            }
+
+            20%,
+            100% {
+                opacity: 0;
+            }
         }
 
-        .phone-screenshot:nth-child(2) { animation-delay: 4s; }
-        .phone-screenshot:nth-child(3) { animation-delay: 8s; }
-        .phone-screenshot:nth-child(4) { animation-delay: 12s; }
-        .phone-screenshot:nth-child(5) { animation-delay: 16s; }
+        .phone-screenshot:nth-child(2) {
+            animation-delay: 4s;
+        }
+
+        .phone-screenshot:nth-child(3) {
+            animation-delay: 8s;
+        }
+
+        .phone-screenshot:nth-child(4) {
+            animation-delay: 12s;
+        }
+
+        .phone-screenshot:nth-child(5) {
+            animation-delay: 16s;
+        }
 
         .phone-screenshot {
             position: absolute;
@@ -534,21 +498,35 @@
         }
 
         @keyframes floatPhone1 {
-            0%, 100% { transform: translateY(0px) rotate(-15deg); }
-            50% { transform: translateY(-30px) rotate(-10deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(-15deg);
+            }
+
+            50% {
+                transform: translateY(-30px) rotate(-10deg);
+            }
         }
 
         @keyframes floatPhone2 {
-            0%, 100% { transform: translateY(0px) rotate(10deg); }
-            50% { transform: translateY(30px) rotate(15deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(10deg);
+            }
+
+            50% {
+                transform: translateY(30px) rotate(15deg);
+            }
         }
 
         .floating-phone-screen {
             width: 100%;
             height: 100%;
             border-radius: 28px;
-            background: linear-gradient(180deg, rgba(30, 76, 66, 0.6) 0%, rgba(11, 36, 30, 0.8) );
-            
+            background: linear-gradient(180deg, rgba(30, 76, 66, 0.6) 0%, rgba(11, 36, 30, 0.8));
+
         }
 
         /* Features Section */
@@ -621,12 +599,29 @@
             animation: fadeInUpCard 0.8s ease-out forwards;
         }
 
-        .feature-card:nth-child(1) { animation-delay: 0.1s; }
-        .feature-card:nth-child(2) { animation-delay: 0.2s; }
-        .feature-card:nth-child(3) { animation-delay: 0.3s; }
-        .feature-card:nth-child(4) { animation-delay: 0.4s; }
-        .feature-card:nth-child(5) { animation-delay: 0.5s; }
-        .feature-card:nth-child(6) { animation-delay: 0.6s; }
+        .feature-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .feature-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .feature-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .feature-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .feature-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .feature-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
 
         @keyframes fadeInUpCard {
             to {
@@ -704,7 +699,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
+            background:
                 radial-gradient(circle at 25% 30%, rgba(237, 175, 83, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 75% 70%, rgba(237, 175, 83, 0.08) 0%, transparent 50%);
             pointer-events: none;
@@ -738,22 +733,52 @@
             overflow: hidden;
         }
 
-        .screenshot-item:nth-child(1) { animation-delay: 0.1s; }
-        .screenshot-item:nth-child(2) { animation-delay: 0.15s; }
-        .screenshot-item:nth-child(3) { animation-delay: 0.2s; }
-        .screenshot-item:nth-child(4) { animation-delay: 0.25s; }
-        .screenshot-item:nth-child(5) { animation-delay: 0.3s; }
-        .screenshot-item:nth-child(6) { animation-delay: 0.35s; }
-        .screenshot-item:nth-child(7) { animation-delay: 0.4s; }
-        .screenshot-item:nth-child(8) { animation-delay: 0.45s; }
-        .screenshot-item:nth-child(9) { animation-delay: 0.5s; }
-        .screenshot-item:nth-child(10) { animation-delay: 0.55s; }
+        .screenshot-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .screenshot-item:nth-child(2) {
+            animation-delay: 0.15s;
+        }
+
+        .screenshot-item:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .screenshot-item:nth-child(4) {
+            animation-delay: 0.25s;
+        }
+
+        .screenshot-item:nth-child(5) {
+            animation-delay: 0.3s;
+        }
+
+        .screenshot-item:nth-child(6) {
+            animation-delay: 0.35s;
+        }
+
+        .screenshot-item:nth-child(7) {
+            animation-delay: 0.4s;
+        }
+
+        .screenshot-item:nth-child(8) {
+            animation-delay: 0.45s;
+        }
+
+        .screenshot-item:nth-child(9) {
+            animation-delay: 0.5s;
+        }
+
+        .screenshot-item:nth-child(10) {
+            animation-delay: 0.55s;
+        }
 
         @keyframes fadeInScale {
             from {
                 opacity: 0;
                 transform: scale(0.9);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -807,11 +832,25 @@
             animation: fadeInScale 0.8s ease-out backwards;
         }
 
-        .social-link:nth-child(1) { animation-delay: 0.1s; }
-        .social-link:nth-child(2) { animation-delay: 0.2s; }
-        .social-link:nth-child(3) { animation-delay: 0.3s; }
-        .social-link:nth-child(4) { animation-delay: 0.4s; }
-        .social-link:nth-child(5) { animation-delay: 0.5s; }
+        .social-link:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .social-link:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .social-link:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .social-link:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .social-link:nth-child(5) {
+            animation-delay: 0.5s;
+        }
 
         .social-link::before {
             content: '';
@@ -862,8 +901,15 @@
         }
 
         @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.3); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.3);
+            }
         }
 
         /* Mobile Menu */
@@ -894,7 +940,7 @@
             }
 
             .hero-visual {
-                order: 2;
+                /* order: 2; */
                 height: 500px;
             }
 
@@ -1010,6 +1056,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -1033,7 +1080,7 @@
         <div class="geometric-shape shape-1"></div>
         <div class="geometric-shape shape-2"></div>
         <div class="geometric-shape shape-3"></div>
-        
+
         <div class="hero-content">
             <div class="hero-text">
                 <div class="hero-badge">🌙 Your Digital Islamic Companion</div>
@@ -1043,9 +1090,43 @@
                     Spiritual Journey
                 </h1>
                 <p class="hero-subtitle">
-                    Experience the most <strong>comprehensive Islamic app</strong> with Quran, Prayer Times, Qibla Direction, AI-powered guidance, and more. Join thousands of Muslims worldwide in strengthening their connection with Allah.
+                    Experience the most <strong>comprehensive Islamic app</strong> with Quran, Prayer Times, Qibla
+                    Direction, AI-powered guidance, and more. Join thousands of Muslims worldwide in strengthening their
+                    connection with Allah.
                 </p>
-                
+
+
+
+                <div class="download-section">
+                    <a href="https://play.google.com/store/apps/details?id=com.ummahpro.app" class="download-btn"
+                        target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                        </svg>
+                        Play Store
+                    </a>
+
+                    <a href="https://apps.apple.com/pk/app/ummah-pro-adhan-qibla-quran/id6756920484"
+                        class="download-btn secondary" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z" />
+                        </svg>
+                        App Store
+                    </a>
+
+                    <a href="#" class="download-btn secondary"
+                        onclick="alert('APK download will be available soon!'); return false;">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M13,9V3.5L18.5,9M6,2C4.89,2 4,2.89 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2H6Z" />
+                        </svg>
+                        APK
+                    </a>
+                </div>
+
+
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-number">10K+</span>
@@ -1060,31 +1141,8 @@
                         <span class="stat-label">Features</span>
                     </div>
                 </div>
-                
-                <div class="download-section">
-                    <a href="https://play.google.com/store/apps/details?id=com.ummahpro.app" class="download-btn" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
-                        </svg>
-                        Play Store
-                    </a>
-                    
-                    <a href="https://apps.apple.com/pk/app/ummah-pro-adhan-qibla-quran/id6756920484" class="download-btn secondary" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z"/>
-                        </svg>
-                        App Store
-                    </a>
-                    
-                    <a href="#" class="download-btn secondary" onclick="alert('APK download will be available soon!'); return false;">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M13,9V3.5L18.5,9M6,2C4.89,2 4,2.89 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2H6Z"/>
-                        </svg>
-                        APK
-                    </a>
-                </div>
             </div>
-            
+
             <div class="hero-visual">
                 <div class="floating-phone floating-phone-1">
                     <div class="floating-phone-screen"></div>
@@ -1092,7 +1150,7 @@
                 <div class="floating-phone floating-phone-2">
                     <div class="floating-phone-screen"></div>
                 </div>
-                
+
                 <div class="phone-mockup">
                     <div class="phone-notch"></div>
                     <div class="phone-screen">
@@ -1111,42 +1169,47 @@
     <section class="features" id="features">
         <h2 class="section-title">Powerful Features</h2>
         <p class="section-subtitle">Everything you need for your spiritual journey in one beautiful app</p>
-        
+
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">📖</div>
                 <h3>Recite Quran</h3>
-                <p>Read the Holy Quran with beautiful Arabic text, multiple translations, and audio recitations from world-renowned Qaris</p>
+                <p>Read the Holy Quran with beautiful Arabic text, multiple translations, and audio recitations from
+                    world-renowned Qaris</p>
             </div>
-            
+
             <div class="feature-card">
                 <div class="feature-icon">🧭</div>
                 <h3>Qibla Direction</h3>
-                <p>Find accurate Qibla direction anywhere in the world using advanced compass technology and GPS precision</p>
+                <p>Find accurate Qibla direction anywhere in the world using advanced compass technology and GPS
+                    precision</p>
             </div>
-            
+
             <div class="feature-card">
                 <div class="feature-icon">🕌</div>
                 <h3>Accurate Prayer Timing</h3>
-                <p>Never miss a prayer with precise prayer times calculated for your exact location with multiple calculation methods</p>
+                <p>Never miss a prayer with precise prayer times calculated for your exact location with multiple
+                    calculation methods</p>
             </div>
-            
+
             <div class="feature-card">
                 <div class="feature-icon">📿</div>
                 <h3>Digital Tasbih</h3>
-                <p>Keep track of your dhikr with a beautiful, easy-to-use digital tasbih counter with customizable goals</p>
+                <p>Keep track of your dhikr with a beautiful, easy-to-use digital tasbih counter with customizable goals
+                </p>
             </div>
-            
+
             <div class="feature-card">
                 <div class="feature-icon">🌙</div>
                 <h3>Daily Azkar</h3>
                 <p>Strengthen your faith with morning and evening remembrance, curated from authentic hadith sources</p>
             </div>
-            
+
             <div class="feature-card">
                 <div class="feature-icon">🤖</div>
                 <h3>AI-Deen</h3>
-                <p>Get instant Islamic guidance and answers to your questions with AI-powered assistance based on authentic sources</p>
+                <p>Get instant Islamic guidance and answers to your questions with AI-powered assistance based on
+                    authentic sources</p>
             </div>
         </div>
     </section>
@@ -1155,7 +1218,7 @@
     <section class="screenshots" id="screenshots">
         <h2 class="section-title">App Screenshots</h2>
         <p class="section-subtitle">Experience the beauty and elegance of Ummah Pro</p>
-        
+
         <div class="screenshots-container">
             <div class="screenshot-item">
                 <img src="screenshot_2.png" alt="Ummah Pro Screenshot" class="screenshot-image">
@@ -1194,37 +1257,53 @@
     <section class="social-media" id="social">
         <h2 class="section-title">Connect With Us</h2>
         <p class="section-subtitle">Follow us on social media for updates, tips, and Islamic content</p>
-        
+
         <div class="social-links">
             <a href="https://facebook.com" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
-                    <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
+                    <path
+                        d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
                 </svg>
             </a>
-            
-            <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+
+            <a href="https://www.instagram.com/ummahpr0?igsh=eXpwYzNsbjl6cnRv" class="social-link" target="_blank"
+                rel="noopener" aria-label="Instagram">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
-                    <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+                    <path
+                        d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
                 </svg>
             </a>
-            
-            <a href="https://tiktok.com" class="social-link" target="_blank" rel="noopener" aria-label="TikTok">
+
+            <a href="www.tiktok.com/@ummah.pro" class="social-link" target="_blank" rel="noopener" aria-label="TikTok">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
-                    <path d="M16.6,5.82s.51.5,0,0A4.278,4.278,0,0,0,15.54,3h-3.09V12.4a2.592,2.592,0,0,1-2.59,2.5c-1.42,0-2.6-1.16-2.6-2.6c0-1.72,1.66-3.01,3.37-2.48V6.66c-3.45-.46-6.47,2.22-6.47,5.64c0,3.33,2.76,5.7,5.69,5.7c3.14,0,5.69-2.55,5.69-5.7V9.01a7.35,7.35,0,0,0,4.3,1.38V7.3s-1.88.09-3.24-1.48Z"/>
+                    <path
+                        d="M16.6,5.82s.51.5,0,0A4.278,4.278,0,0,0,15.54,3h-3.09V12.4a2.592,2.592,0,0,1-2.59,2.5c-1.42,0-2.6-1.16-2.6-2.6c0-1.72,1.66-3.01,3.37-2.48V6.66c-3.45-.46-6.47,2.22-6.47,5.64c0,3.33,2.76,5.7,5.69,5.7c3.14,0,5.69-2.55,5.69-5.7V9.01a7.35,7.35,0,0,0,4.3,1.38V7.3s-1.88.09-3.24-1.48Z" />
                 </svg>
             </a>
-            
+
             <a href="https://twitter.com" class="social-link" target="_blank" rel="noopener" aria-label="Twitter">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
-                    <path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.70,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"/>
+                    <path
+                        d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.70,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
                 </svg>
             </a>
-            
+
             <a href="https://discord.com" class="social-link" target="_blank" rel="noopener" aria-label="Discord">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
-                    <path d="M22,24L16.75,19L17.38,21H4.5A2.5,2.5 0 0,1 2,18.5V3.5A2.5,2.5 0 0,1 4.5,1H19.5A2.5,2.5 0 0,1 22,3.5V24M12,6.8C9.32,6.8 7.44,7.95 7.44,7.95C8.47,7.03 10.27,6.5 10.27,6.5L10.1,6.33C8.41,6.36 6.88,7.53 6.88,7.53C5.16,11.12 5.27,14.22 5.27,14.22C6.67,16.03 8.75,15.9 8.75,15.9L9.46,15C8.21,14.73 7.42,13.62 7.42,13.62C7.42,13.62 9.3,14.9 12,14.9C14.7,14.9 16.58,13.62 16.58,13.62C16.58,13.62 15.79,14.73 14.54,15L15.25,15.9C15.25,15.9 17.33,16.03 18.73,14.22C18.73,14.22 18.84,11.12 17.12,7.53C17.12,7.53 15.59,6.36 13.9,6.33L13.73,6.5C13.73,6.5 15.53,7.03 16.56,7.95C16.56,7.95 14.68,6.8 12,6.8M9.93,10.59C10.58,10.59 11.11,11.16 11.1,11.86C11.1,12.55 10.58,13.13 9.93,13.13C9.29,13.13 8.77,12.55 8.77,11.86C8.77,11.16 9.28,10.59 9.93,10.59M14.1,10.59C14.75,10.59 15.27,11.16 15.27,11.86C15.27,12.55 14.75,13.13 14.1,13.13C13.46,13.13 12.94,12.55 12.94,11.86C12.94,11.16 13.45,10.59 14.1,10.59Z"/>
+                    <path
+                        d="M22,24L16.75,19L17.38,21H4.5A2.5,2.5 0 0,1 2,18.5V3.5A2.5,2.5 0 0,1 4.5,1H19.5A2.5,2.5 0 0,1 22,3.5V24M12,6.8C9.32,6.8 7.44,7.95 7.44,7.95C8.47,7.03 10.27,6.5 10.27,6.5L10.1,6.33C8.41,6.36 6.88,7.53 6.88,7.53C5.16,11.12 5.27,14.22 5.27,14.22C6.67,16.03 8.75,15.9 8.75,15.9L9.46,15C8.21,14.73 7.42,13.62 7.42,13.62C7.42,13.62 9.3,14.9 12,14.9C14.7,14.9 16.58,13.62 16.58,13.62C16.58,13.62 15.79,14.73 14.54,15L15.25,15.9C15.25,15.9 17.33,16.03 18.73,14.22C18.73,14.22 18.84,11.12 17.12,7.53C17.12,7.53 15.59,6.36 13.9,6.33L13.73,6.5C13.73,6.5 15.53,7.03 16.56,7.95C16.56,7.95 14.68,6.8 12,6.8M9.93,10.59C10.58,10.59 11.11,11.16 11.1,11.86C11.1,12.55 10.58,13.13 9.93,13.13C9.29,13.13 8.77,12.55 8.77,11.86C8.77,11.16 9.28,10.59 9.93,10.59M14.1,10.59C14.75,10.59 15.27,11.16 15.27,11.86C15.27,12.55 14.75,13.13 14.1,13.13C13.46,13.13 12.94,12.55 12.94,11.86C12.94,11.16 13.45,10.59 14.1,10.59Z" />
                 </svg>
             </a>
+
+            <a href="https://www.threads.com/@ummahpr0" class="social-link" target="_blank" rel="noopener"
+                aria-label="Threads">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+                    <path
+                        d="M12 2C6.48 2 2 6.35 2 12.03C2 17.62 6.25 22 12 22C15.04 22 17.54 20.77 19.1 18.73C20.6 16.77 21.2 14.1 20.67 11.57C20.2 9.34 18.74 7.54 16.64 6.48C14.5 5.39 11.93 5.19 9.7 5.87C7.3 6.6 5.59 8.28 4.9 10.55C4.35 12.33 4.49 14.39 5.29 16.07C6.27 18.11 8.38 19.36 10.67 19.36C12.84 19.36 14.81 18.22 15.68 16.23C16.5 14.37 16.11 12.05 14.55 10.77C13.49 9.89 12.02 9.63 10.73 10.07C9.43 10.52 8.57 11.61 8.47 12.95H10.1C10.23 12.14 10.85 11.53 11.65 11.53C12.53 11.53 13.21 12.18 13.21 13.03C13.21 14.47 11.9 15.39 10.57 15.39C9.03 15.39 7.75 14.44 7.24 13.04C6.7 11.54 7.23 9.73 8.56 8.79C10.06 7.72 12.15 7.66 13.74 8.65C15.23 9.58 16.06 11.27 16.05 13.04C16.03 15.21 14.81 17.16 12.83 18.01C10.85 18.86 8.43 18.52 6.78 17.11C4.95 15.55 4.27 12.93 4.98 10.68C5.72 8.34 7.8 6.65 10.27 6.28C12.72 5.92 15.27 6.8 17.07 8.51C18.78 10.13 19.6 12.45 19.26 14.77C18.92 17.09 17.44 19.15 15.36 20.16C13.24 21.19 10.71 21.08 8.7 19.92C6.41 18.6 5 16.04 5 13.3H3.2C3.2 16.75 5.04 19.94 7.9 21.53C10.65 23.05 14.01 23.17 16.87 21.85C19.68 20.55 21.63 17.83 21.96 14.77C22.29 11.64 20.91 8.55 18.47 6.67C16.12 4.85 13.04 4.16 10.12 4.78C7.2 5.4 4.78 7.24 3.7 10.05C2.58 12.96 3.07 16.27 5.04 18.72C7.07 21.25 10.2 22.62 13.4 22.28C16.56 21.95 19.41 19.97 20.83 17.11C22.27 14.2 22.03 10.78 20.18 8.08C18.22 5.21 14.92 3.54 11.45 3.73V2Z" />
+                </svg>
+            </a>
+
+
         </div>
     </section>
 
@@ -1258,10 +1337,10 @@
 
         // Header background on scroll
         let lastScroll = 0;
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const header = document.querySelector('header');
             const scrolled = window.pageYOffset;
-            
+
             if (scrolled > 100) {
                 header.style.background = 'linear-gradient(180deg, rgba(30, 76, 66, 1) 0%, rgba(11, 36, 30, 1) 100%)';
                 header.style.padding = '0.8rem 5%';
@@ -1269,7 +1348,7 @@
                 header.style.background = 'linear-gradient(180deg, rgba(30, 76, 66, 0.95) 0%, rgba(11, 36, 30, 0.98) 100%)';
                 header.style.padding = '1.2rem 5%';
             }
-            
+
             lastScroll = scrolled;
         });
 
@@ -1278,7 +1357,7 @@
         //     const scrolled = window.pageYOffset;
         //     const hero = document.querySelector('.hero');
         //     const heroContent = document.querySelector('.hero-content');
-            
+
         //     if (hero && scrolled < hero.offsetHeight) {
         //         heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
         //         hero.style.opacity = 1 - (scrolled / hero.offsetHeight) * 0.5;
@@ -1291,7 +1370,7 @@
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver(function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
@@ -1346,4 +1425,5 @@
         }
     </script>
 </body>
+
 </html>
